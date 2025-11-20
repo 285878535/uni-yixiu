@@ -1,0 +1,64 @@
+import { fileURLToPath, URL } from "node:url"
+import { defineConfig, loadEnv } from "vite"
+
+// 当前工作目录路径
+const root = process.cwd()
+
+// https://vitejs.dev/config/
+export default defineConfig(({ mode }) => {
+  // 加载环境变量
+  const env = loadEnv(mode, root)
+  const { VITE_BASE_URL, VITE_BASE_API, VITE_SERVER } = env
+
+  return {
+    // uni-app 使用相对路径
+    base: './',
+    
+    build: {
+      // 使用 terser 压缩
+      minify: "terser",
+      terserOptions: {
+        compress: {
+          drop_console: true, // 去除 console
+          drop_debugger: true, // 去除 debugger
+        },
+      },
+    },
+
+    // 开发服务器配置（仅 H5 平台有效）
+    server: {
+      port: 3000,
+      open: true,
+      host: true,
+      // 代理配置（H5 平台使用，小程序等平台需要在 manifest.json 中配置）
+      proxy: VITE_BASE_API && VITE_SERVER ? {
+        [VITE_BASE_API]: {
+          target: VITE_SERVER,
+          changeOrigin: true, // 是否允许不同源
+          secure: false, // 支持 https
+          rewrite: (path) =>
+            path.replace(new RegExp("^" + VITE_BASE_API), VITE_BASE_API),
+        },
+      } : {},
+    },
+
+    // CSS 配置
+    css: {
+      preprocessorOptions: {
+        scss: {
+          // 如果需要在 scss 中使用全局变量，可以在这里配置
+          // additionalData: '@import "@/assets/styles/variables.scss";',
+          javascriptEnabled: true,
+        },
+      },
+    },
+
+    // 路径别名配置
+    resolve: {
+      alias: {
+        "@": fileURLToPath(new URL(".", import.meta.url)),
+      },
+    },
+  }
+})
+

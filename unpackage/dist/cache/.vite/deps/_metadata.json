@@ -1,0 +1,25 @@
+{
+  "hash": "31728e34",
+  "configHash": "62bc6a0c",
+  "lockfileHash": "f39604c3",
+  "browserHash": "4f0570cc",
+  "optimized": {
+    "quill": {
+      "src": "../../../../../node_modules/quill/quill.js",
+      "file": "quill.js",
+      "fileHash": "991b6897",
+      "needsInterop": false
+    },
+    "vconsole": {
+      "src": "../../../../../node_modules/vconsole/dist/vconsole.min.js",
+      "file": "vconsole.js",
+      "fileHash": "93d3bf10",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-UV5CTPV7": {
+      "file": "chunk-UV5CTPV7.js"
+    }
+  }
+}

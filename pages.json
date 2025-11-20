@@ -1,0 +1,156 @@
+{
+	"pages": [
+		// {
+		// 	"path": "pages/archives/index",
+		// 	"style": {
+		// 		"navigationBarTitleText": "档案馆",
+		// 		"enablePullDownRefresh": false
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/collection/index",
+		// 	"style": {
+		// 		"navigationBarTitleText": "看收藏",
+		// 		"enablePullDownRefresh": false
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/maintenance/index",
+		// 	"style": {
+		// 		"navigationBarTitleText": "修车",
+		// 		"enablePullDownRefresh": false
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/circle/index",
+		// 	"style": {
+		// 		"navigationBarTitleText": "修车圈",
+		// 		"enablePullDownRefresh": false
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/log/index",
+		// 	"style": {
+		// 		"navigationBarTitleText": "记日志",
+		// 		"enablePullDownRefresh": false
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/chat/index",
+		// 	"style": {
+		// 		"navigationBarTitleText": "提问",
+		// 		"enablePullDownRefresh": false
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/useredit/index",
+		// 	"style": {
+		// 		"navigationBarTitleText": "编辑信息",
+		// 		"enablePullDownRefresh": false
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/log/editLog",
+		// 	"style": {
+		// 		"navigationBarTitleText": "编辑日志",
+		// 		"enablePullDownRefresh": false
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/log/conversationHistory",
+		// 	"style": {
+		// 		"navigationBarTitleText": "对话历史",
+		// 		"enablePullDownRefresh": false
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/userEdit/alipay",
+		// 	"style": {
+		// 		"navigationBarTitleText": "支付",
+		// 		"enablePullDownRefresh": false
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/userEdit/paymentResult",
+		// 	"style": {
+		// 		"navigationBarTitleText": "支付结果",
+		// 		"enablePullDownRefresh": false
+		// 	}
+		// },
+		// {
+		// 	"path": "pages/collection/detail",
+		// 	"style": {
+		// 		"navigationBarTitleText": "收藏详情",
+		// 		"enablePullDownRefresh": false
+		// 	}
+		// },
+		{
+			"path": "pages/login/index",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"enablePullDownRefresh": false
+			}
+		}
+		// {
+		// 	"path": "pages/404/index",
+		// 	"style": {
+		// 		"navigationBarTitleText": "访问页面不存在",
+		// 		"enablePullDownRefresh": false
+		// 	}
+		// }
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "易修",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff"
+		// "list": [
+		// 	{
+		// 		"pagePath": "pages/archives/index",
+		// 		"iconPath": "static/tabbar/archives.png",
+		// 		"selectedIconPath": "static/tabbar/archives-active.png",
+		// 		"text": "档案馆"
+		// 	},
+		// 	{
+		// 		"pagePath": "pages/collection/index",
+		// 		"iconPath": "static/tabbar/collection.png",
+		// 		"selectedIconPath": "static/tabbar/collection-active.png",
+		// 		"text": "看收藏"
+		// 	},
+		// 	{
+		// 		"pagePath": "pages/maintenance/index",
+		// 		"iconPath": "static/tabbar/maintenance.png",
+		// 		"selectedIconPath": "static/tabbar/maintenance-active.png",
+		// 		"text": "修车"
+		// 	},
+		// 	{
+		// 		"pagePath": "pages/circle/index",
+		// 		"iconPath": "static/tabbar/circle.png",
+		// 		"selectedIconPath": "static/tabbar/circle-active.png",
+		// 		"text": "修车圈"
+		// 	},
+		// 	{
+		// 		"pagePath": "pages/log/index",
+		// 		"iconPath": "static/tabbar/log.png",
+		// 		"selectedIconPath": "static/tabbar/log-active.png",
+		// 		"text": "记日志"
+		// 	}
+		// ]
+	}
+	// "condition": {
+	// 	"current": 0,
+	// 	"list": [
+	// 		{
+	// 			"name": "档案馆",
+	// 			"path": "pages/archives/index",
+	// 			"query": ""
+	// 		}
+	// 	]
+	// }
+}
