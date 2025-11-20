@@ -1,19 +1,19 @@
 {
-  "hash": "31728e34",
+  "hash": "8fa7e69d",
   "configHash": "62bc6a0c",
-  "lockfileHash": "f39604c3",
-  "browserHash": "4f0570cc",
+  "lockfileHash": "fb32e56a",
+  "browserHash": "04299150",
   "optimized": {
     "quill": {
       "src": "../../../../../node_modules/quill/quill.js",
       "file": "quill.js",
-      "fileHash": "991b6897",
+      "fileHash": "bc4fc0c9",
       "needsInterop": false
     },
     "vconsole": {
       "src": "../../../../../node_modules/vconsole/dist/vconsole.min.js",
       "file": "vconsole.js",
-      "fileHash": "93d3bf10",
+      "fileHash": "ad3e7b93",
       "needsInterop": true
     }
   },

@@ -1,0 +1,6 @@
+.tabbar-page {
+  height: calc(100% - var(--van-tabbar-height));
+  padding: var(--tabbar-page-padding-tb) var(--tabbar-page-padding-lr);
+  overflow-y: auto;
+  position: relative;
+}

@@ -136,9 +136,15 @@ const onToken = async (token) => {
     })
     
     // 使用 uni-app 路由跳转
-    uni.reLaunch({
-      url: routePath
-    })
+    if (data?.register) {
+      uni.reLaunch({
+        url: '/pages/useredit/index?first=true'
+      })
+    } else {
+      uni.reLaunch({
+        url: '/pages/archives/index'
+      })
+    }
   } catch (error) {
     console.error(error)
   }

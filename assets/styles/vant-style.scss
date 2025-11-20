@@ -1,0 +1,20 @@
+:root:root {
+  --van-button-primary-background: #d1d1d1;
+  --van-button-primary-border-color: #d1d1d1;
+  --van-button-primary-color: #000000;
+  --van-nav-bar-height: 50px;
+  --van-nav-bar-title-font-size: 20px;
+  --van-font-bold: 400;
+  --van-nav-bar-icon-color: black;
+  --tabbar-page-padding-tb: 8px;
+  --tabbar-page-padding-lr: 16px;
+  --box-shadow-custom: 0px 0px 5px 0px #a2a2a233;
+  --van-floating-bubble-background: #fff;
+  --van-floating-bubble-color: #000;
+  --van-floating-bubble-size: 64px;
+  --van-search-height: 45px;
+  --van-cell-background: #f3f2f2;
+}
+.van-floating-bubble {
+  border: 2px solid #000;
+}

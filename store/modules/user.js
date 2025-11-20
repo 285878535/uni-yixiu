@@ -6,7 +6,22 @@ import { setToken, removeToken } from '@/utils/auth'
 
 export const useUserStore = defineStore('user', {
   state: () => ({
-    userInfo: null,
+    userInfo: {
+      name: '',
+      avatar: '',
+      userId: '',
+      repairCount: 0,
+      day: 0,
+      isPro: false,
+    },
+    user: {
+      name: '',
+      avatar: '',
+      userId: '',
+      repairCount: 0,
+      day: 0,
+      isPro: false,
+    },
     token: '',
   }),
   
@@ -42,6 +57,19 @@ export const useUserStore = defineStore('user', {
      */
     login(userInfo) {
       this.userInfo = userInfo
+      this.user = userInfo
+    },
+    
+    /**
+     * 设置修车次数
+     */
+    setRepairCount(count) {
+      if (this.userInfo) {
+        this.userInfo.repairCount = count
+      }
+      if (this.user) {
+        this.user.repairCount = count
+      }
     },
     
     /**

@@ -1,7 +1,7 @@
 <script>
 import { getToken } from '@/utils/auth'
 import { whiteList, pageDefaultTitle } from '@/utils/settings'
-import * as NProgress from '@/utils/progress'
+import { start, done } from '@/utils/progress'
 import { getPageTitle } from '@/utils/router'
 
 export default {
@@ -24,7 +24,7 @@ export default {
 			uni.addInterceptor('navigateTo', {
 				invoke(args) {
 					// 开始加载
-					NProgress.start()
+					start()
 					
 					// 检查是否需要登录
 					const needLogin = self.checkNeedLogin(args.url)
@@ -43,18 +43,18 @@ export default {
 				},
 				success() {
 					// 跳转成功
-					NProgress.done()
+					done()
 				},
 				fail() {
 					// 跳转失败
-					NProgress.done()
+					done()
 				}
 			})
 			
 			// 拦截重定向
 			uni.addInterceptor('redirectTo', {
 				invoke(args) {
-					NProgress.start()
+					start()
 					const needLogin = self.checkNeedLogin(args.url)
 					if (needLogin) {
 						uni.reLaunch({
@@ -66,17 +66,17 @@ export default {
 					return true
 				},
 				success() {
-					NProgress.done()
+					done()
 				},
 				fail() {
-					NProgress.done()
+					done()
 				}
 			})
 			
 			// 拦截切换 Tab
 			uni.addInterceptor('switchTab', {
 				invoke(args) {
-					NProgress.start()
+					start()
 					const needLogin = self.checkNeedLogin(args.url)
 					if (needLogin) {
 						uni.reLaunch({
@@ -87,17 +87,17 @@ export default {
 					return true
 				},
 				success() {
-					NProgress.done()
+					done()
 				},
 				fail() {
-					NProgress.done()
+					done()
 				}
 			})
 			
 			// 拦截重新启动
 			uni.addInterceptor('reLaunch', {
 				invoke(args) {
-					NProgress.start()
+					start()
 					const needLogin = self.checkNeedLogin(args.url)
 					if (needLogin) {
 						args.url = '/pages/login/index'
@@ -106,10 +106,10 @@ export default {
 					return true
 				},
 				success() {
-					NProgress.done()
+					done()
 				},
 				fail() {
-					NProgress.done()
+					done()
 				}
 			})
 		},
